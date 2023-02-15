@@ -7,21 +7,30 @@ html, body {
 body {
   font-family:'Roboto';
   background-color: black;  
+
+  height: auto;
+  padding: 0;
+  margin: 0;
 }
 
 .top-nav {
     height: 0px;
     font-size: 1.8rem;
     z-index: 55555;
+
+    position: sticky;
+    top: 0px;
 }
 
-.top-nav a {
+.top-nav a, 
+.bot-nav a {
     text-decoration: none;
     color: #707070;
     transition: all linear .15s;
 }
 
-.top-nav a:hover {
+.top-nav a:hover,
+.bot-nav a:hover {
     color: white;
 }
 
@@ -31,7 +40,8 @@ body {
     list-style: none;
 }
 
-.top-nav li {
+.top-nav li,
+.bot-nav li {
     padding: 0;
     line-height: 2rem;
 }
@@ -51,26 +61,11 @@ body {
     bottom: 0px;
 }
 
-.bot-nav a {
-    text-decoration: none;
-    color: #707070;
-    transition: all linear .15s;
-}
-
-.bot-nav a:hover {
-    color: white;
-}
-
 .bot-nav ul {
     padding: 0 1rem 1rem 0;
     margin: 0;
     list-style: none;
     text-align: right;
-}
-
-.bot-nav li {
-    padding: 0;
-    line-height: 2rem;
 }
 
 h1 {
@@ -129,4 +124,9 @@ h1 {
   80% {margin-top: -11.64rem;}
   95% {margin-top: 0;}
   100% {margin-top: 0;}
+}
+
+.portfolio {
+    width: 100%;
+    height: 70rem;
 }
