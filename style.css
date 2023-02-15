@@ -1,34 +1,37 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto:700');
 
+html, body {
+    height: 100vh;
+}
+
 body {
   font-family:'Roboto';
   background-color: black;  
 }
 
-.topnav {
-    display: flex;
-    justify-content: space-between;
+.top-nav {
     height: 0px;
     font-size: 1.8rem;
+    z-index: 55555;
 }
 
-.topnav a {
+.top-nav a {
     text-decoration: none;
     color: #707070;
     transition: all linear .15s;
 }
 
-.topnav a:hover {
+.top-nav a:hover {
     color: white;
 }
 
-.topnav ul {
+.top-nav ul {
     padding: 1rem 0 0 1rem;
     margin: 0;
     list-style: none;
 }
 
-.topnav li {
+.top-nav li {
     padding: 0;
     line-height: 2rem;
 }
@@ -37,8 +40,37 @@ body {
     color: white;
 }
 
-.social-link {
-    padding: 1rem 1rem 0 0;
+.bot-nav {
+    display: flex; 
+    justify-content: end;
+    
+    font-size: 1.8rem;
+    z-index: 55555;
+
+    position: sticky;
+    bottom: 0px;
+}
+
+.bot-nav a {
+    text-decoration: none;
+    color: #707070;
+    transition: all linear .15s;
+}
+
+.bot-nav a:hover {
+    color: white;
+}
+
+.bot-nav ul {
+    padding: 0 1rem 1rem 0;
+    margin: 0;
+    list-style: none;
+    text-align: right;
+}
+
+.bot-nav li {
+    padding: 0;
+    line-height: 2rem;
 }
 
 h1 {
@@ -51,11 +83,11 @@ h1 {
   letter-spacing: 1.5px;
 }
 
-.container {
+.landing {
   color: #e5e5e5;
   font-size: 2.26rem;
   text-transform: uppercase;
-  height: 100vh;
+  height: 40rem;
   display: flex;
   align-items: center;
   justify-content: center;
