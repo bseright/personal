@@ -1,0 +1,64 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:700');
+
+body {
+  font-family:'Roboto';
+  background-color: black;  
+}
+
+h1 {
+  text-shadow:
+  -1.5px -1.5px 0 #438496,  
+  1.5px -1.5px 0 #438496,
+  -1.5px 1.5px 0 #438496,
+  1.5px 1.5px 0 #438496;
+  color: black;
+  letter-spacing: 1.5px;
+}
+
+.container {
+  color: #e5e5e5;
+  font-size: 2.26rem;
+  text-transform: uppercase;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.animation {
+  height: 70px;
+  overflow: hidden;
+  margin: .9rem 0 0 1rem;
+}
+
+.animation > div > div {
+  padding: 0.36rem 0.75rem;
+  height:2.81rem;
+  margin-bottom: 2.81rem;
+  display:inline-block;
+}
+
+.animation div:first-child {
+  animation: text-animation 8s infinite;
+}
+
+.first div {
+  background-color: #cd5360;
+}
+.second div {
+  background-color: #b37d4e;
+}
+.third div {
+  background-color: #286da5;
+}
+
+@keyframes text-animation {
+  0% {margin-top: 0;}
+  20% {margin-top: 0;}
+  30% {margin-top: -5.62rem;}
+  40% {margin-top: -5.62rem;}
+  50% {margin-top: -11.64rem;}
+  80% {margin-top: -11.64rem;}
+  95% {margin-top: 0;}
+  100% {margin-top: 0;}
+}
