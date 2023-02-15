@@ -5,6 +5,42 @@ body {
   background-color: black;  
 }
 
+.topnav {
+    display: flex;
+    justify-content: space-between;
+    height: 0px;
+    font-size: 1.8rem;
+}
+
+.topnav a {
+    text-decoration: none;
+    color: #707070;
+    transition: all linear .15s;
+}
+
+.topnav a:hover {
+    color: white;
+}
+
+.topnav ul {
+    padding: 1rem 0 0 1rem;
+    margin: 0;
+    list-style: none;
+}
+
+.topnav li {
+    padding: 0;
+    line-height: 2rem;
+}
+
+.active a {
+    color: white;
+}
+
+.social-link {
+    padding: 1rem 1rem 0 0;
+}
+
 h1 {
   text-shadow:
   -1.5px -1.5px 0 #438496,  
