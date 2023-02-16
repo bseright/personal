@@ -4,6 +4,10 @@ html, body {
   height: 100vh;
 }
 
+.test {
+  color: black;
+}
+
 body {
   font-family:'Roboto';
   background-color: black;  
