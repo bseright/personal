@@ -32,14 +32,21 @@ body {
 }
 
 .top-nav a {
-    text-decoration: none;
-    color: #212121;
-    transition: all linear .15s;
+  text-decoration: none;
+  color: #212121;
+  transition: all linear .15s;
 }
 
-.top-nav a:hover {
-    color: #f9f9f9;
-    font-size: 1.7rem;
+.inactive:hover:after {
+  content:"";
+  position:absolute;
+
+  background:#f9f9f9;
+  width: 8px;
+  height: 8px;
+  border-radius: 100%;
+
+  margin: 6px 0 0 10px;
 }
 
 .top-nav ul {
