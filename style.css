@@ -16,57 +16,47 @@ body {
 
 .top-nav {
   height: 0px;
-  font-size: 1.8rem;
+  font-size: 1.2rem;
   z-index: 55555;
 
   position: sticky;
   top: 0px;
+
+  padding-top: 2rem;
 }
 
-.top-nav a, 
-.bot-nav a {
+.top-nav img {
+  height: 30px;
+  filter: brightness(0) invert(1);
+  margin-left: 13px;
+}
+
+.top-nav a {
     text-decoration: none;
     color: #212121;
     transition: all linear .15s;
 }
 
-.top-nav a:hover,
-.bot-nav a:hover {
+.top-nav a:hover {
     color: #f9f9f9;
+    font-size: 1.7rem;
 }
 
 .top-nav ul {
-    padding: 1rem 0 0 1rem;
+    padding: 0 0 0 1rem;
     margin: 0;
     list-style: none;
 }
 
-.top-nav li,
-.bot-nav li {
+.top-nav li {
     padding: 0;
-    line-height: 2rem;
+    line-height: 1.4rem;
 }
 
 .active a {
     color: #f9f9f9;
-}
-
-.bot-nav {
-    display: flex; 
-    justify-content: end;
-    
-    font-size: 1.8rem;
-    z-index: 55555;
-
-    position: sticky;
-    bottom: 0px;
-}
-
-.bot-nav ul {
-    padding: 0 1rem 1rem 0;
-    margin: 0;
-    list-style: none;
-    text-align: right;
+    font-size: 1.7rem;
+    line-height: 4rem;
 }
 
 h1 {
@@ -140,7 +130,9 @@ h1 {
 
   margin-right: 175px;
   background-image: url('images/color-palette.png');
-  background-position-x: -275px;
+  background-position-x: -175px;
+  background-size: 1275px;
+  
   mix-blend-mode: screen;
 }
 
@@ -155,21 +147,22 @@ h1 {
   height: 400px;
   display: flex;
   justify-content: center;
+  padding: 0 100px;
 }
 
 .portfolio-item {
   height: 100%;
   flex: 1;
-  transition: all linear .2s;
+  transition: all linear .3s;
 }
 
 .portfolio-item:hover {
-  flex: 10;
+  flex: 20;
 }
 
 .portfolio1 {
   background-color: #ffe45e;
-  border-radius: 15px 0 0 15px;
+  border-radius: 30px 0 0 30px;
 }
 
 .portfolio2 {
@@ -182,5 +175,5 @@ h1 {
 
 .portfolio4 {
   background-color: #5aa9e6;
-  border-radius: 0 15px 15px 0;
+  border-radius: 0 30px 30px 0;
 }
