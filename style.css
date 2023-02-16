@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto:700');
 
 html, body {
-    height: 100vh;
+  height: 100vh;
 }
 
 body {
@@ -9,23 +9,24 @@ body {
   background-color: black;  
 
   height: auto;
+  width: 1500px;
   padding: 0;
-  margin: 0;
+  margin: 0 auto;
 }
 
 .top-nav {
-    height: 0px;
-    font-size: 1.8rem;
-    z-index: 55555;
+  height: 0px;
+  font-size: 1.8rem;
+  z-index: 55555;
 
-    position: sticky;
-    top: 0px;
+  position: sticky;
+  top: 0px;
 }
 
 .top-nav a, 
 .bot-nav a {
     text-decoration: none;
-    color: #707070;
+    color: #212121;
     transition: all linear .15s;
 }
 
@@ -76,6 +77,8 @@ h1 {
   1.5px 1.5px 0 #438496;
   color: black;
   letter-spacing: 1.5px;
+  padding-left: 100px;
+  z-index: 55555;
 }
 
 .landing {
@@ -92,13 +95,15 @@ h1 {
   height: 70px;
   overflow: hidden;
   margin: .9rem 0 0 1rem;
+  z-index: 55555;
 }
 
 .animation > div > div {
   padding: 0.36rem 0.75rem;
-  height:2.81rem;
+  height: 2.81rem;
   margin-bottom: 2.81rem;
   display:inline-block;
+  color: black;
 }
 
 .animation div:first-child {
@@ -106,13 +111,13 @@ h1 {
 }
 
 .first div {
-  background-color: #cd5360;
+  background-color: white;
 }
 .second div {
-  background-color: #b37d4e;
+  background-color: white;
 }
 .third div {
-  background-color: #286da5;
+  background-color: white;
 }
 
 @keyframes text-animation {
@@ -126,7 +131,17 @@ h1 {
   100% {margin-top: 0;}
 }
 
+.border-landing {
+  height: 175px;
+  width: 775px;
+
+  position: absolute;
+  border: 5px solid white;
+
+  margin-right: 175px;
+}
+
 .portfolio {
-    width: 100%;
-    height: 70rem;
+  width: 1300px;
+  height: 70rem;
 }
