@@ -136,13 +136,23 @@ h1 {
   width: 775px;
 
   position: absolute;
-  border: 5px solid #f9f9f9;
+  border: 5px solid transparent;
 
   margin-right: 175px;
+  background-image: url('images/color-palette.png');
+  background-position-x: -275px;
+  mix-blend-mode: screen;
+}
+
+.border-landing-bg {
+  height: 175px;
+  width: 775px;
+
+  background-color: black;
 }
 
 .portfolio {
-  height: 550px;
+  height: 400px;
   display: flex;
   justify-content: center;
 }
