@@ -144,6 +144,13 @@ h1 {
   background-image: url('images/color-palette.PNG');
   background-position-x: -160px;
   background-size: 1275px;
+
+  animation: background-animation linear 20s infinite;
+}
+
+@keyframes background-animation {
+  0% {background-position-x: -160px;}
+  100% {background-position-x: 1115px;}
 }
 
 .border-landing-bg {
