@@ -142,6 +142,28 @@ h1 {
 }
 
 .portfolio {
-  width: 1300px;
-  height: 70rem;
+  height: 550px;
+  display: flex;
+  justify-content: center;
+}
+
+.portfolio-item {
+  height: 100%;
+  flex: 1;
+}
+
+.portfolio1 {
+  background-color: #F3D250;
+}
+
+.portfolio2 {
+  background-color: #90CCF4;
+}
+
+.portfolio3 {
+  background-color: #F78888;
+}
+
+.portfolio4 {
+  background-color: #5DA2D5;
 }
