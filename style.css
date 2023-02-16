@@ -99,6 +99,7 @@ h1 {
   padding: 0.36rem 0.75rem;
   height: 2.81rem;
   margin-bottom: 2.81rem;
+  border-radius: 10px;
   display:inline-block;
   color: black;
 }
@@ -129,23 +130,23 @@ h1 {
 }
 
 .border-landing {
-  height: 175px;
-  width: 775px;
+  height: 185px;
+  width: 785px;
 
   position: absolute;
-  border: 5px solid transparent;
 
   margin-right: 175px;
+  border-radius: 25px;
   background-image: url('images/color-palette.png');
-  background-position-x: -175px;
+  background-position-x: -160px;
   background-size: 1275px;
-  
-  mix-blend-mode: screen;
 }
 
 .border-landing-bg {
   height: 175px;
   width: 775px;
+  margin: 5px 0 0 5px;
+  border-radius: 20px;
 
   background-color: black;
 }
