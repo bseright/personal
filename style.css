@@ -32,7 +32,7 @@ body {
 
 .top-nav a:hover,
 .bot-nav a:hover {
-    color: white;
+    color: #f9f9f9;
 }
 
 .top-nav ul {
@@ -48,7 +48,7 @@ body {
 }
 
 .active a {
-    color: white;
+    color: #f9f9f9;
 }
 
 .bot-nav {
@@ -71,10 +71,10 @@ body {
 
 h1 {
   text-shadow:
-  -1.5px -1.5px 0 #438496,  
-  1.5px -1.5px 0 #438496,
-  -1.5px 1.5px 0 #438496,
-  1.5px 1.5px 0 #438496;
+  -1.5px -1.5px 0 #f9f9f9,  
+  1.5px -1.5px 0 #f9f9f9,
+  -1.5px 1.5px 0 #f9f9f9,
+  1.5px 1.5px 0 #f9f9f9;
   color: black;
   letter-spacing: 1.5px;
   padding-left: 100px;
@@ -111,13 +111,13 @@ h1 {
 }
 
 .first div {
-  background-color: white;
+  background-color: #f9f9f9;
 }
 .second div {
-  background-color: white;
+  background-color: #f9f9f9;
 }
 .third div {
-  background-color: white;
+  background-color: #f9f9f9;
 }
 
 @keyframes text-animation {
@@ -136,7 +136,7 @@ h1 {
   width: 775px;
 
   position: absolute;
-  border: 5px solid white;
+  border: 5px solid #f9f9f9;
 
   margin-right: 175px;
 }
@@ -150,20 +150,27 @@ h1 {
 .portfolio-item {
   height: 100%;
   flex: 1;
+  transition: all linear .2s;
+}
+
+.portfolio-item:hover {
+  flex: 10;
 }
 
 .portfolio1 {
-  background-color: #F3D250;
+  background-color: #ffe45e;
+  border-radius: 15px 0 0 15px;
 }
 
 .portfolio2 {
-  background-color: #90CCF4;
+  background-color: #7fc8f8;
 }
 
 .portfolio3 {
-  background-color: #F78888;
+  background-color: #ff6392;
 }
 
 .portfolio4 {
-  background-color: #5DA2D5;
+  background-color: #5aa9e6;
+  border-radius: 0 15px 15px 0;
 }
