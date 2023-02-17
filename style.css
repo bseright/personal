@@ -10,11 +10,12 @@ html, body {
 
 body {
   font-family:'Roboto';
-  background-color: black;  
+  background-color: black; 
 
+  margin: 0 auto;
+  padding: 0;
   height: auto;
   width: 1500px;
-  padding: 0;
 }
 
 .top-nav {
@@ -26,6 +27,7 @@ body {
   top: 0px;
 
   padding: 2rem 0 0 0rem;
+  overflow: visible;
 }
 
 .top-nav img {
@@ -68,8 +70,7 @@ body {
 
 .active a {
     color: #f9f9f9;
-    font-size: 1.7rem;
-    line-height: 3rem;
+    line-height: 2rem;
 }
 
 h1 {
