@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Roboto:700');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
 
 html, body {
   height: 100vh;
@@ -15,7 +15,6 @@ body {
   height: auto;
   width: 1500px;
   padding: 0;
-  margin: 0 auto;
 }
 
 .top-nav {
@@ -26,7 +25,7 @@ body {
   position: sticky;
   top: 0px;
 
-  padding: 2rem 0 0 .5rem;
+  padding: 2rem 0 0 0rem;
 }
 
 .top-nav img {
@@ -59,6 +58,7 @@ body {
     padding: 0;
     margin: 0;
     list-style: none;
+    font-weight: 700;
 }
 
 .top-nav li {
@@ -82,6 +82,7 @@ h1 {
   letter-spacing: 1.5px;
   padding-left: 100px;
   z-index: 55555;
+  font-weight: 700;
 }
 
 .landing {
@@ -106,6 +107,7 @@ h1 {
   height: 2.81rem;
   margin-bottom: 2.81rem;
   border-radius: 10px;
+  font-weight: 700;
   display:inline-block;
   color: black;
 }
@@ -165,10 +167,10 @@ h1 {
 }
 
 .portfolio {
-  height: 400px;
+  height: 600px;
   display: flex;
   justify-content: center;
-  padding: 0 100px 150px 100px;
+  padding: 0 100px 50px 100px;
 }
 
 .portfolio-item {
@@ -221,4 +223,47 @@ h1 {
 
 .portfolio4 .icon {
   filter: invert(69%) sepia(26%) saturate(3271%) hue-rotate(179deg) brightness(75%) contrast(90%);
+}
+
+#about {
+  height: 200px;
+  margin: 0;
+  padding: 180px 0 230px 0;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+h2 {
+  color: #f9f9f9;
+  width: 1000px;
+  margin: 0;
+  font-size: 2.3rem;
+  font-weight: 500;
+  line-height: 3.2rem;
+}
+
+.animated-break {
+  height: 5px;
+  width: 75%;
+  border-radius: 4px;
+
+  margin: 0 auto;
+
+  background-image: url('images/color-palette.PNG');
+  background-position-x: -160px;
+  background-size: 1275px;
+
+  animation: background-animation linear 20s infinite;
+}
+
+#contact {
+  height: 200px;
+  margin: 0;
+  padding: 180px 0 230px 0;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
