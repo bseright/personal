@@ -26,22 +26,23 @@ body {
   position: sticky;
   top: 0px;
 
-  padding-top: 2rem;
+  padding: 2rem 0 0 .5rem;
 }
 
 .top-nav img {
   height: 30px;
   filter: brightness(0) invert(1);
   margin-left: 13px;
+  padding-bottom: 15px;
 }
 
 .top-nav a {
   text-decoration: none;
-  color: #212121;
+  color: #313131;
   transition: all linear .15s;
 }
 
-.inactive:hover:after {
+.inactive:hover:before {
   content:"";
   position:absolute;
 
@@ -50,24 +51,24 @@ body {
   height: 8px;
   border-radius: 100%;
 
-  margin: 6px 0 0 10px;
+  margin: 6px 0 0 -15px;
 }
 
 .top-nav ul {
-    padding: 0 0 0 1rem;
+    padding: 0;
     margin: 0;
     list-style: none;
 }
 
 .top-nav li {
-    padding: 0;
     line-height: 1.4rem;
+    margin-left: 15px;
 }
 
 .active a {
     color: #f9f9f9;
     font-size: 1.7rem;
-    line-height: 4rem;
+    line-height: 3rem;
 }
 
 h1 {
