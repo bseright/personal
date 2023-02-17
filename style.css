@@ -276,7 +276,7 @@ input[type=text], input[type=email], select, textarea {
   border-radius: 4px; 
   box-sizing: border-box; 
   margin-top: 6px; 
-  margin-bottom: 30px; 
+  margin-bottom: 20px; 
   resize: vertical;
 }
 
@@ -287,23 +287,23 @@ textarea {
 input[type=submit] {
   width: 100%;
   height: 50px;
-  background-color: #ff6392;
-  color: black;
+  background-color: black;
+  color: #f9f9f9;
 
   text-transform: uppercase;
-  font-size: 1.2rem;
+  font-size: 1rem;
   font-weight: 700;
   letter-spacing: .05rem;
 
   padding: 5px 20px;
   margin-top: 8px;
-  border: none;
+  border: 3px solid white ;
   border-radius: 4px;
   cursor: pointer;
 }
 
 input[type=submit]:hover {
-  background-color: #5aa9e6;
+  background-color: #131313;
 }
 
 .contact-left {
