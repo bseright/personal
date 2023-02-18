@@ -31,8 +31,7 @@ body {
 }
 
 .top-nav img {
-  height: 30px;
-  filter: brightness(0) invert(1);
+  height: 53px;
   margin-left: 13px;
   padding-bottom: 15px;
 }
@@ -298,7 +297,7 @@ input[type=submit] {
   padding: 5px 20px;
   margin-top: 8px;
   border: 3px solid white ;
-  border-radius: 4px;
+  border-radius: 10px;
   cursor: pointer;
 }
 
