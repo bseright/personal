@@ -186,7 +186,10 @@ h1 {
   height: 150px;
   width: auto;
   pointer-events: none;
+  transition: .1s all;
 }
+
+
 
 .portfolio-item:hover {
   flex: 3;
@@ -319,12 +322,6 @@ label {
   font-weight: 300;
 }
 
-#portfolio1 .icon,
-#portfolio2 .icon,
-#portfolio3 .icon,
-#portfolio4 .icon {
-  transition: .1s all;
-}
 
 
 
