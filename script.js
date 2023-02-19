@@ -3,7 +3,7 @@
 let portfolio1 = document.querySelector("#portfolio1")
 let portfolio1Icon = document.querySelector("#portfolio1 .icon");
 
-let masterTimer;
+let masterTimer; // created to solve issue where user mouses over and out quickly -> allows timed out functions to stop if done too quickly
 
 let portfolio1Mouseover = function() { 
     portfolio1Icon.style.opacity = "0";
