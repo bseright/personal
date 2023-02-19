@@ -334,3 +334,19 @@ label {
   font-weight: 300;
 }
 
+.portfolio1 .icon,
+.portfolio2 .icon,
+.portfolio3 .icon,
+.portfolio4 .icon {
+  transition: .1s all;
+}
+
+.transparent {
+  opacity: 0;
+}
+
+.hidden {
+  display: none;
+}
+
+
