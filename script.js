@@ -11,11 +11,16 @@ let portfolio1Mouseover = function() {
     masterTimer = setTimeout(() => {
         portfolio1Icon.style.display = "none";
         portfolio1.appendChild(p1Div);
+
+        setTimeout(() => {
+            p1Div.style.opacity = "100";
+        }, "70")
     }, "200")
 }
 
 let portfolio1Mouseout = function() { 
     clearTimeout(masterTimer);
+    p1Div.style.opacity = "0";
     p1Div.remove();
     portfolio1Icon.style.display = "block";
 

@@ -186,7 +186,7 @@ h1 {
   height: 150px;
   width: auto;
   pointer-events: none;
-  transition: .07s all;
+  transition: .2s all;
 }
 
 .portfolio-item:hover {
@@ -200,6 +200,8 @@ h1 {
 
 .p1Div {
   pointer-events: none;
+  opacity: 0;
+  transition: .2s all;
 }
 
 .p1Div h3 {
