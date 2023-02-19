@@ -33,12 +33,13 @@ let portfolio2Icon = document.querySelector("#portfolio2 .icon");
 let portfolio2Mouseover = function() { 
     portfolio2Icon.style.opacity = "0";
 
-    setTimeout(() => {
+    masterTimer = setTimeout(() => {
         portfolio2Icon.style.display = "none";
     }, "100")
 }
 
 let portfolio2Mouseout = function() { 
+    clearTimeout(masterTimer);
     portfolio2Icon.style.display = "block";
 
     setTimeout(() => {
@@ -57,12 +58,13 @@ let portfolio3Icon = document.querySelector("#portfolio3 .icon");
 let portfolio3Mouseover = function() { 
     portfolio3Icon.style.opacity = "0";
 
-    setTimeout(() => {
+    masterTimer = setTimeout(() => {
         portfolio3Icon.style.display = "none";
     }, "100")
 }
 
 let portfolio3Mouseout = function() { 
+    clearTimeout(masterTimer);
     portfolio3Icon.style.display = "block";
 
     setTimeout(() => {
@@ -81,12 +83,13 @@ let portfolio4Icon = document.querySelector("#portfolio4 .icon");
 let portfolio4Mouseover = function() { 
     portfolio4Icon.style.opacity = "0";
 
-    setTimeout(() => {
+    masterTimer = setTimeout(() => {
         portfolio4Icon.style.display = "none";
     }, "100")
 }
 
 let portfolio4Mouseout = function() { 
+    clearTimeout(masterTimer);
     portfolio4Icon.style.display = "block";
 
     setTimeout(() => {
