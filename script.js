@@ -11,11 +11,12 @@ let portfolio1Mouseover = function() {
     masterTimer = setTimeout(() => {
         portfolio1Icon.style.display = "none";
         portfolio1.appendChild(p1Div);
-    }, "70")
+    }, "200")
 }
 
 let portfolio1Mouseout = function() { 
     clearTimeout(masterTimer);
+    p1Div.remove();
     portfolio1Icon.style.display = "block";
 
     setTimeout(() => {
@@ -101,7 +102,7 @@ let portfolio4Mouseout = function() {
 portfolio4.addEventListener('mouseover', portfolio4Mouseover);
 portfolio4.addEventListener('mouseout', portfolio4Mouseout);
 
-// createing portfolio1 hover content 
+// creating portfolio1 hover content 
 
 let p1Div = document.createElement("div");
 p1Div.classList.add("p1Div");
@@ -120,3 +121,4 @@ p1Para.appendChild(p1ParaText);
 p1Div.appendChild(p1Header);
 p1Div.appendChild(p1Screenshot);
 p1Div.appendChild(p1Para);
+
