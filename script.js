@@ -10,7 +10,8 @@ let portfolio1Mouseover = function() {
 
     masterTimer = setTimeout(() => {
         portfolio1Icon.style.display = "none";
-    }, "100")
+        portfolio1.appendChild(p1Div);
+    }, "70")
 }
 
 let portfolio1Mouseout = function() { 
@@ -19,7 +20,7 @@ let portfolio1Mouseout = function() {
 
     setTimeout(() => {
         portfolio1Icon.style.opacity = "100";
-    }, "100")
+    }, "70")
 }
 
 portfolio1.addEventListener('mouseover', portfolio1Mouseover);
@@ -35,7 +36,7 @@ let portfolio2Mouseover = function() {
 
     masterTimer = setTimeout(() => {
         portfolio2Icon.style.display = "none";
-    }, "100")
+    }, "70")
 }
 
 let portfolio2Mouseout = function() { 
@@ -44,7 +45,7 @@ let portfolio2Mouseout = function() {
 
     setTimeout(() => {
         portfolio2Icon.style.opacity = "100";
-    }, "100")
+    }, "70")
 }
 
 portfolio2.addEventListener('mouseover', portfolio2Mouseover);
@@ -53,14 +54,14 @@ portfolio2.addEventListener('mouseout', portfolio2Mouseout);
 // portfolio3 hover animation
 
 let portfolio3 = document.querySelector("#portfolio3")
-let portfolio3Icon = document.querySelector("#portfolio3 .icon");
+let portfolio3Icon = document.querySelector("#portfolio3 .icon"); 
 
 let portfolio3Mouseover = function() { 
     portfolio3Icon.style.opacity = "0";
 
     masterTimer = setTimeout(() => {
         portfolio3Icon.style.display = "none";
-    }, "100")
+    }, "70")
 }
 
 let portfolio3Mouseout = function() { 
@@ -69,7 +70,7 @@ let portfolio3Mouseout = function() {
 
     setTimeout(() => {
         portfolio3Icon.style.opacity = "100";
-    }, "100")
+    }, "70")
 }
 
 portfolio3.addEventListener('mouseover', portfolio3Mouseover);
@@ -85,7 +86,7 @@ let portfolio4Mouseover = function() {
 
     masterTimer = setTimeout(() => {
         portfolio4Icon.style.display = "none";
-    }, "100")
+    }, "70")
 }
 
 let portfolio4Mouseout = function() { 
@@ -94,8 +95,28 @@ let portfolio4Mouseout = function() {
 
     setTimeout(() => {
         portfolio4Icon.style.opacity = "100";
-    }, "100")
+    }, "70")
 }
 
 portfolio4.addEventListener('mouseover', portfolio4Mouseover);
 portfolio4.addEventListener('mouseout', portfolio4Mouseout);
+
+// createing portfolio1 hover content 
+
+let p1Div = document.createElement("div");
+p1Div.classList.add("p1Div");
+
+let p1Header = document.createElement("h3");
+let p1HeaderText = document.createTextNode("Rock Paper Scissors");
+p1Header.appendChild(p1HeaderText);
+
+let p1Screenshot = document.createElement("img");
+p1Screenshot.src = "images/rps-screenshot2.PNG";
+
+let p1Para = document.createElement("p");
+let p1ParaText = document.createTextNode("An animated game of Rock, Paper, Scissors with randomized opponent selection.");
+p1Para.appendChild(p1ParaText);
+
+p1Div.appendChild(p1Header);
+p1Div.appendChild(p1Screenshot);
+p1Div.appendChild(p1Para);
