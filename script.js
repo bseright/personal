@@ -115,9 +115,6 @@ p1Div.classList.add("p1Div");
 let p1ImgDiv = document.createElement("div");
 p1ImgDiv.classList.add("p1ImgDiv");
 
-let p1ParaDiv = document.createElement("div");
-p1ParaDiv.classList.add("p1ParaDiv");
-
 let p1ButtonDiv = document.createElement("div");
 p1ButtonDiv.classList.add("p1ButtonDiv")
 
@@ -134,7 +131,7 @@ let p1Para = document.createElement("p");
 let p1ParaText = document.createTextNode("An animated game of Rock, Paper, Scissors with randomized opponent selection.");
 p1Para.appendChild(p1Title);
 p1Para.appendChild(p1ParaText);
-p1ParaDiv.appendChild(p1Para);
+p1ImgDiv.appendChild(p1Para);
 
 let p1Repo = document.createElement("button");
 let repoText = document.createTextNode("Repo");
@@ -149,7 +146,6 @@ p1Demo.classList.add("p1Demo");
 p1ButtonDiv.appendChild(p1Demo);
 
 p1Div.appendChild(p1ImgDiv);
-p1Div.appendChild(p1ParaDiv);
 p1Div.appendChild(p1ButtonDiv);
 
 
