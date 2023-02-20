@@ -15,7 +15,7 @@ let portfolio1Mouseover = function() {
         setTimeout(() => {
             p1Div.style.opacity = "100";
         }, "70")
-    }, "200")
+    }, "250")
 }
 
 let portfolio1Mouseout = function() { 
@@ -112,18 +112,46 @@ portfolio4.addEventListener('mouseout', portfolio4Mouseout);
 let p1Div = document.createElement("div");
 p1Div.classList.add("p1Div");
 
-let p1Header = document.createElement("h3");
-let p1HeaderText = document.createTextNode("Rock Paper Scissors");
-p1Header.appendChild(p1HeaderText);
+let p1ImgDiv = document.createElement("div");
+p1ImgDiv.classList.add("p1ImgDiv");
+
+let p1ParaDiv = document.createElement("div");
+p1ParaDiv.classList.add("p1ParaDiv");
+
+let p1ButtonDiv = document.createElement("div");
+p1ButtonDiv.classList.add("p1ButtonDiv")
 
 let p1Screenshot = document.createElement("img");
-p1Screenshot.src = "images/rps-screenshot2.PNG";
+p1Screenshot.src = "images/rps-screenshot.PNG";
+p1ImgDiv.appendChild(p1Screenshot);
+
+let p1Title = document.createElement("span");
+let p1TitleText = document.createTextNode("Rock, Paper, Scissors - ")
+p1Title.appendChild(p1TitleText);
+p1Title.classList.add("titles")
 
 let p1Para = document.createElement("p");
 let p1ParaText = document.createTextNode("An animated game of Rock, Paper, Scissors with randomized opponent selection.");
+p1Para.appendChild(p1Title);
 p1Para.appendChild(p1ParaText);
+p1ParaDiv.appendChild(p1Para);
 
-p1Div.appendChild(p1Screenshot);
-p1Div.appendChild(p1Header);
-p1Div.appendChild(p1Para);
+let p1Repo = document.createElement("button");
+let repoText = document.createTextNode("Repo");
+p1Repo.appendChild(repoText);
+p1Repo.classList.add("p1Repo");
+p1ButtonDiv.appendChild(p1Repo);
+
+let p1Demo = document.createElement("button");
+let demoText = document.createTextNode("Demo");
+p1Demo.appendChild(demoText)
+p1Demo.classList.add("p1Demo");
+p1ButtonDiv.appendChild(p1Demo);
+
+p1Div.appendChild(p1ImgDiv);
+p1Div.appendChild(p1ParaDiv);
+p1Div.appendChild(p1ButtonDiv);
+
+
+
 
