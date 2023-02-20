@@ -123,7 +123,7 @@ let p1Para = document.createElement("p");
 let p1ParaText = document.createTextNode("An animated game of Rock, Paper, Scissors with randomized opponent selection.");
 p1Para.appendChild(p1ParaText);
 
-p1Div.appendChild(p1Header);
 p1Div.appendChild(p1Screenshot);
+p1Div.appendChild(p1Header);
 p1Div.appendChild(p1Para);
 
