@@ -238,16 +238,18 @@ h1 {
   font-size: 18px;
   padding: 0;
   margin: 50px 0 0 0;
-  color: #5A5A5A;
+  color: black;
 }
 
 .titles {
   font-weight: 700;
   font-size: 20px;
+  color: black;
 }
 
 .portfolio-item button {
   background-color: rgba(255, 255, 255, 0.445);
+  color: black;
   border: none;
   padding: 20px;
   width: 100%;

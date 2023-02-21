@@ -122,14 +122,8 @@ let p1Screenshot = document.createElement("img");
 p1Screenshot.src = "images/rps-screenshot.PNG";
 p1ImgDiv.appendChild(p1Screenshot);
 
-let p1Title = document.createElement("span");
-let p1TitleText = document.createTextNode("Rock, Paper, Scissors - ")
-p1Title.appendChild(p1TitleText);
-p1Title.classList.add("titles")
-
 let p1Para = document.createElement("p");
 let p1ParaText = document.createTextNode("An animated game of Rock, Paper, Scissors with randomized opponent selection.");
-p1Para.appendChild(p1Title);
 p1Para.appendChild(p1ParaText);
 p1ImgDiv.appendChild(p1Para);
 
