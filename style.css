@@ -210,55 +210,58 @@ h1 {
   text-align: center;
 }
 
-.p1Div img,
-.p1Div p {
-  width: 450px;
-}
-
 .p1Div img {
+  width: 550px;
   opacity: .9;
+  border-radius: 10px 0 0 0;
 }
 
-.p1ImgDiv {
+.p1ContentDiv {
   height: 100%;
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
   
   background-color: rgba(255, 255, 255, 0.445);
   border-radius: 15px 0 0 0;
   width: 100%;
+  padding-top: 20px;
   margin: 0;
-  padding: 40px 0;
 }
 
+.p1TextContent {
+  display: flex;
+  flex-direction: column;
+  width: 550px;
+  justify-content: flex-start;
+  align-items: flex-start;
+  text-align: left;
+  margin-top: 30px;
+  font-size: 16px;
+  color: #252525;
+}
+
+.p1TextContent h3 {
+  letter-spacing: 4%;
+  padding: 0;
+  margin: 0;
+}
+
+.p1Divider {
+  height: 2px; 
+  width: 100%; 
+  background-color: black;
+  border-radius: 1px;
+  margin: 10px 0 15px 0;
+}
 
 .portfolio-item p {
-  font-size: 18px;
+  font-size: 14px;
+  letter-spacing: 4%;
+  line-height: 1.3rem;
   padding: 0;
-  margin: 50px 0 0 0;
-  color: black;
-}
-
-.titles {
-  font-weight: 700;
-  font-size: 20px;
-  color: black;
-}
-
-.portfolio-item button {
-  background-color: rgba(255, 255, 255, 0.445);
-  color: black;
-  border: none;
-  padding: 20px;
+  margin: 0;
   width: 100%;
-  font-weight: 700;
-  font-size: 20px;
-}
-
-.p1Repo {
-  border-radius: 0 0 0 15px;
 }
 
 .p1ButtonDiv {
@@ -267,6 +270,19 @@ h1 {
   gap: 20px;
   margin-top: 20px;
 }
+
+.portfolio-item button {
+  background-color: rgba(255, 255, 255, 0.445);
+  color: #252525;
+  border: none;
+  padding: 10px 0;
+  width: 100%;
+  font-weight: 700;
+  font-size: 16px;
+  letter-spacing: 4%;
+  border-radius: 10px;
+}
+
 
 #portfolio2 {
   background-color: #7fc8f8;
