@@ -1,36 +1,43 @@
 // portfolio1 hover animation
 
-let portfolio1 = document.querySelector("#portfolio1")
-let portfolio1Icon = document.querySelector("#portfolio1 .icon");
+let p1 = document.querySelector("#p1")
+let p1Icon = document.querySelector("#p1 .icon");
 
 let masterTimer; // created to solve issue where user mouses over and out quickly -> allows timed out functions to stop if done too quickly
 
-let portfolio1Mouseover = function() { 
-    portfolio1Icon.style.opacity = "0";
+let pMouseover = function() {
+    let thisIcon = eval(this.id + "Icon");
+    let thisDiv = eval(this.id + "Div");
+    let container = eval(this.id);
+
+    thisIcon.style.opacity = "0";
 
     masterTimer = setTimeout(() => {
-        portfolio1Icon.style.display = "none";
-        portfolio1.appendChild(p1Div);
+        thisIcon.style.display = "none";
+        container.appendChild(thisDiv);
 
         setTimeout(() => {
-            p1Div.style.opacity = "100";
+            thisDiv.style.opacity = "100";
         }, "70")
     }, "250")
 }
 
-let portfolio1Mouseout = function() { 
+let pMouseout = function() { 
+    let thisIcon = eval(this.id + "Icon");
+    let thisDiv = eval(this.id + "Div");
+
     clearTimeout(masterTimer);
-    p1Div.style.opacity = "0";
-    p1Div.remove();
-    portfolio1Icon.style.display = "block";
+    thisDiv.style.opacity = "0";
+    thisDiv.remove();
+    thisIcon.style.display = "block";
 
     setTimeout(() => {
-        portfolio1Icon.style.opacity = "100";
+        thisIcon.style.opacity = "100";
     }, "70")
 }
 
-portfolio1.addEventListener('mouseover', portfolio1Mouseover);
-portfolio1.addEventListener('mouseout', portfolio1Mouseout);
+p1.addEventListener('mouseover', pMouseover);
+p1.addEventListener('mouseout', pMouseout);
 
 // portfolio2 hover animation
 
