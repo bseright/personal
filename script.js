@@ -26,7 +26,7 @@ let pMouseover = function() {
         setTimeout(() => {
             thisDiv.style.opacity = "100";
         }, "70")
-    }, "250")
+    }, "275")
 }
 
 let pMouseout = function() { 
@@ -57,58 +57,76 @@ p4.addEventListener('mouseout', pMouseout);
 
 // creating portfolio1 hover content 
 
-let createPContent = function() {
+let p1Div;
+let p2Div;
+let p3Div;
+let p4Div;
 
+let p1TitleText = "Rock, Paper, Scissor";
 
-    
+function createContent(whichP) {
+    let pTitleText = document.createTextNode(p1TitleText);
+    let pParaText = document.createTextNode("An animated game of Rock, Paper, Scissors with randomized opponent selection. Rounds are played until either party reaches a score of five. Once the ending score is reached, the user is alerted of the outcome. This project was a great assessment of my animations skills  and ability to keep track of and clear running timeouts.");
+
+    let pDiv = document.createElement("div");
+    pDiv.classList.add("pDiv");
+
+    let pContentDiv = document.createElement("div");
+    pContentDiv.classList.add("pContentDiv");
+
+    let pButtonDiv = document.createElement("div");
+    pButtonDiv.classList.add("pButtonDiv")
+
+    let pScreenshot = document.createElement("img");
+    pContentDiv.appendChild(pScreenshot);
+
+    let pTextContent = document.createElement("div");
+    pTextContent.classList.add("pTextContent");
+    pContentDiv.appendChild(pTextContent);
+
+    let pTitle = document.createElement("h3"); // Main title text
+    pTitle.appendChild(pTitleText);
+    pTextContent.appendChild(pTitle);
+
+    let pDivider = document.createElement("div"); // Creation of divider
+    pDivider.classList.add("pDivider");
+    pTextContent.appendChild(pDivider);
+
+    let pPara = document.createElement("p"); // Project description
+    pPara.appendChild(pParaText);
+    pTextContent.appendChild(pPara);
+
+    let pRepo = document.createElement("button");
+    let repoText = document.createTextNode("Repo");
+    pRepo.appendChild(repoText);
+    pRepo.classList.add("pRepo");
+    pButtonDiv.appendChild(pRepo);
+
+    let pDemo = document.createElement("button");
+    let demoText = document.createTextNode("Demo");
+    pDemo.appendChild(demoText)
+    pDemo.classList.add("pDemo");
+    pButtonDiv.appendChild(pDemo);
+
+    if(whichP === "p1") {
+        pScreenshot.src = "images/rps-screenshot.PNG";
+        p1Div = pDiv;
+    } else if (whichP === "p2") {
+        p2Div = pDiv;
+    } else if (whichP === "p3") {
+        p3Div = pDiv;
+    } else {
+        p4Div = pDiv;
+    }
+
+    pDiv.appendChild(pContentDiv);
+    pDiv.appendChild(pButtonDiv);
 }
 
-let p1Div = document.createElement("div");
-p1Div.classList.add("p1Div");
-
-let p1ContentDiv = document.createElement("div");
-p1ContentDiv.classList.add("p1ContentDiv");
-
-let p1ButtonDiv = document.createElement("div");
-p1ButtonDiv.classList.add("p1ButtonDiv")
-
-let p1Screenshot = document.createElement("img");
-p1Screenshot.src = "images/rps-screenshot.PNG";
-p1ContentDiv.appendChild(p1Screenshot);
-
-let p1TextContent = document.createElement("div");
-p1TextContent.classList.add("p1TextContent");
-p1ContentDiv.appendChild(p1TextContent);
-
-let p1Title = document.createElement("h3"); // Main title text
-let p1TitleText = document.createTextNode("Rock, Paper, Scissors");
-p1Title.appendChild(p1TitleText);
-p1TextContent.appendChild(p1Title);
-
-let p1Divider = document.createElement("div"); // Creation of divider
-p1Divider.classList.add("p1Divider");
-p1TextContent.appendChild(p1Divider);
-
-let p1Para = document.createElement("p"); // Project description
-let p1ParaText = document.createTextNode("An animated game of Rock, Paper, Scissors with randomized opponent selection. Rounds are played until either party reaches a score of five. Once the ending score is reached, the user is alerted of the outcome. This project was a great assessment of my animations skills  and ability to keep track of and clear running timeouts.");
-p1Para.appendChild(p1ParaText);
-p1TextContent.appendChild(p1Para);
-
-let p1Repo = document.createElement("button");
-let repoText = document.createTextNode("Repo");
-p1Repo.appendChild(repoText);
-p1Repo.classList.add("p1Repo");
-p1ButtonDiv.appendChild(p1Repo);
-
-let p1Demo = document.createElement("button");
-let demoText = document.createTextNode("Demo");
-p1Demo.appendChild(demoText)
-p1Demo.classList.add("p1Demo");
-p1ButtonDiv.appendChild(p1Demo);
-
-p1Div.appendChild(p1ContentDiv);
-p1Div.appendChild(p1ButtonDiv);
-
+createContent("p1");
+createContent("p2");
+createContent("p3");
+createContent("p4");
 
 
 
