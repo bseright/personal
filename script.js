@@ -62,11 +62,17 @@ let p2Div;
 let p3Div;
 let p4Div;
 
-let p1TitleText = "Rock, Paper, Scissor";
+let getTitleText = "Rock, Paper, Scissors"
+let p2TitleText = "Etch-a-Sketch";
+let p3TitleText = "Calculator";
+let p4TitleText = "Mobile-Responsive Design";
+
+let getParaText = "An animated game of Rock, Paper, Scissors with randomized opponent selection. Rounds are played until either party reaches a score of five. Once the ending score is reached, the user is alerted of the outcome. This project was a great assessment of my animations skills  and ability to keep track of and clear running timeouts.";
+let p2ParaText = "Placeholder";
+let p3ParaText = "Placeholder";
+let p4ParaText = "Placeholder";
 
 function createContent(whichP) {
-    let pTitleText = document.createTextNode(p1TitleText);
-    let pParaText = document.createTextNode("An animated game of Rock, Paper, Scissors with randomized opponent selection. Rounds are played until either party reaches a score of five. Once the ending score is reached, the user is alerted of the outcome. This project was a great assessment of my animations skills  and ability to keep track of and clear running timeouts.");
 
     let pDiv = document.createElement("div");
     pDiv.classList.add("pDiv");
@@ -85,6 +91,7 @@ function createContent(whichP) {
     pContentDiv.appendChild(pTextContent);
 
     let pTitle = document.createElement("h3"); // Main title text
+    let pTitleText = document.createTextNode(getTitleText);
     pTitle.appendChild(pTitleText);
     pTextContent.appendChild(pTitle);
 
@@ -93,6 +100,7 @@ function createContent(whichP) {
     pTextContent.appendChild(pDivider);
 
     let pPara = document.createElement("p"); // Project description
+    let pParaText = document.createTextNode(getParaText);
     pPara.appendChild(pParaText);
     pTextContent.appendChild(pPara);
 
@@ -110,10 +118,16 @@ function createContent(whichP) {
 
     if(whichP === "p1") {
         pScreenshot.src = "images/rps-screenshot.PNG";
+        getTitleText = p2TitleText;
+        getParaText = p2ParaText;
         p1Div = pDiv;
     } else if (whichP === "p2") {
+        getTitleText = p3TitleText;
+        getParaText = p3ParaText;
         p2Div = pDiv;
     } else if (whichP === "p3") {
+        getTitleText = p4TitleText;
+        getParaText = p4ParaText;
         p3Div = pDiv;
     } else {
         p4Div = pDiv;
