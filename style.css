@@ -42,7 +42,12 @@ body {
   transition: all linear .15s;
 }
 
-.inactive:hover:before {
+.active a {
+  color: #f9f9f9;
+  line-height: 2rem;
+}
+
+.top-nav li:not(.active):hover:before {
   content:"";
   position:absolute;
 
@@ -67,11 +72,6 @@ body {
     margin-left: 15px;
 }
 
-.active a {
-    color: #f9f9f9;
-    line-height: 2rem;
-}
-
 h1 {
   text-shadow:
   -1.5px -1.5px 0 #f9f9f9,  
@@ -89,7 +89,7 @@ h1 {
   color: #e5e5e5;
   font-size: 2.26rem;
   text-transform: uppercase;
-  height: 40rem;
+  height: 45rem;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -170,7 +170,7 @@ h1 {
   height: 600px;
   display: flex;
   justify-content: center;
-  padding: 0 100px 50px 100px;
+  padding: 100px 100px 50px 100px;
 }
 
 .portfolio-item {

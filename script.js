@@ -145,5 +145,18 @@ createContent("p2");
 createContent("p3");
 createContent("p4");
 
+// start of navbar animations
 
+let navButtons = document.querySelectorAll(".top-menu li");
+let sections = document.querySelectorAll(".section");
+let active = document.querySelector(".active");
 
+navButtons.forEach(item => {
+    item.addEventListener('click', function() {
+        active.classList.remove("active");
+        item.classList.add("active");
+
+        navButtons = document.querySelectorAll(".top-menu li");
+        active = document.querySelector(".active");
+    })
+})
