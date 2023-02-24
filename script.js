@@ -122,14 +122,17 @@ function createContent(whichP) {
         getParaText = p2ParaText;
         p1Div = pDiv;
     } else if (whichP === "p2") {
+        pScreenshot.src = "images/etch-screenshot.PNG";
         getTitleText = p3TitleText;
         getParaText = p3ParaText;
         p2Div = pDiv;
     } else if (whichP === "p3") {
+        pScreenshot.src = "images/calc-screenshot.PNG";
         getTitleText = p4TitleText;
         getParaText = p4ParaText;
         p3Div = pDiv;
     } else {
+        pScreenshot.src = "images/mobile-screenshot.PNG";
         p4Div = pDiv;
     }
 
