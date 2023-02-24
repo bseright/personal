@@ -1,9 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap');
 
-html, body {
-  height: 100vh;
-}
-
 .test {
   color: black;
 }
@@ -14,8 +10,8 @@ body {
 
   margin: 0 auto;
   padding: 0;
-  height: auto;
   width: 1500px;
+  overflow: visible;
 }
 
 .top-nav {
@@ -27,7 +23,6 @@ body {
   top: 0px;
 
   padding: 2rem 0 0 0rem;
-  overflow: visible;
 }
 
 .top-nav img {
