@@ -67,10 +67,10 @@ let p2TitleText = "Etch-a-Sketch";
 let p3TitleText = "Calculator";
 let p4TitleText = "Mobile-Responsive Design";
 
-let getParaText = "An animated game of Rock, Paper, Scissors with randomized opponent selection. Rounds are played until either party reaches a score of five. Once the ending score is reached, the user is alerted of the outcome. This project was a great assessment of my animations skills  and ability to keep track of and clear running timeouts.";
-let p2ParaText = "Placeholder";
-let p3ParaText = "Placeholder";
-let p4ParaText = "Placeholder";
+let getParaText = "An animated game of Rock, Paper, Scissors with randomized opponent selection. Rounds are played until either party reaches a score of five. Once the ending score is reached, the user is alerted of the outcome.";
+let p2ParaText = "An interactive Etch-a-Sketch with scrollable knobs that alter the cursor position and color. The user can randomize color or select a unique color with the provided RGB knobs.";
+let p3ParaText = "A simple calulator with the ability to retain previous outcomes to be further manipulated. For some added flair, there is a toggle to select dark or light themes.";
+let p4ParaText = "My portfolio! Although I am aware that there are many paths to jump start mobile-responsive design, I wanted my first attempt to come from vanilla libraries.";
 
 function createContent(whichP) {
 
