@@ -1,3 +1,5 @@
+let currentRepo;
+
 let p1 = document.querySelector("#p1")
 let p1Icon = document.querySelector("#p1 .icon");
 
@@ -13,6 +15,10 @@ let p4Icon = document.querySelector("#p4 .icon");
 let masterTimer; // created to solve issue where user mouses over and out quickly -> allows timed out functions to stop if done too quickly
 
 let pMouseover = function() {
+    if (masterTimer) {
+        clearTimeout(masterTimer);
+    }
+    
     let thisIcon = eval(this.id + "Icon");
     let thisDiv = eval(this.id + "Div");
     let container = eval(this.id);
@@ -26,6 +32,9 @@ let pMouseover = function() {
         setTimeout(() => {
             thisDiv.style.opacity = "100";
         }, "70")
+
+        currentRepo = document.querySelector(".pRepo");
+        currentRepo.addEventListener('click', repoHover);
     }, "275")
 }
 
@@ -44,16 +53,16 @@ let pMouseout = function() {
 }
 
 p1.addEventListener('mouseover', pMouseover);
-p1.addEventListener('mouseout', pMouseout);
+p1.addEventListener('mouseleave', pMouseout);
 
 p2.addEventListener('mouseover', pMouseover);
-p2.addEventListener('mouseout', pMouseout);
+p2.addEventListener('mouseleave', pMouseout);
 
 p3.addEventListener('mouseover', pMouseover);
-p3.addEventListener('mouseout', pMouseout);
+p3.addEventListener('mouseleave', pMouseout);
 
 p4.addEventListener('mouseover', pMouseover);
-p4.addEventListener('mouseout', pMouseout);
+p4.addEventListener('mouseleave', pMouseout);
 
 // creating portfolio1 hover content 
 
@@ -160,3 +169,9 @@ navButtons.forEach(item => {
         active = document.querySelector(".active");
     })
 })
+
+let pItems = document.querySelectorAll(".portfolio-item");
+
+let repoHover = function() {
+    console.log("I'm working!");
+}
