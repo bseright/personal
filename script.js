@@ -35,15 +35,14 @@ let pMouseover = function() {
     masterTimer = setTimeout(() => {
         thisIcon.style.display = "none";
         container.appendChild(thisDiv);
-
-        setTimeout(() => {
-            thisDiv.style.opacity = "100";
-        }, "30")
-
         currentRepo = document.querySelector(".pRepo");
         currentP = currentRepo.parentNode.parentNode.parentNode.id;
         currentRepo.addEventListener('click', getAndGoRepo);
-    }, "275")
+
+        setTimeout(() => {
+            thisDiv.style.opacity = "100";
+        }, "100")
+    }, "255")
 }
 
 let pMouseout = function() { 
