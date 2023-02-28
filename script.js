@@ -1,4 +1,11 @@
 let currentRepo;
+let repoLink;
+let currentP;
+
+let p1Repo = "https://github.com/bseright/rock-paper-scissors";
+let p2Repo = "https://github.com/bseright/etch-a-sketch";
+let p3Repo = "https://github.com/bseright/calculator";
+let p4Repo = "https://github.com/bseright/personal";
 
 let p1 = document.querySelector("#p1")
 let p1Icon = document.querySelector("#p1 .icon");
@@ -18,7 +25,7 @@ let pMouseover = function() {
     if (masterTimer) {
         clearTimeout(masterTimer);
     }
-    
+
     let thisIcon = eval(this.id + "Icon");
     let thisDiv = eval(this.id + "Div");
     let container = eval(this.id);
@@ -31,10 +38,11 @@ let pMouseover = function() {
 
         setTimeout(() => {
             thisDiv.style.opacity = "100";
-        }, "70")
+        }, "30")
 
         currentRepo = document.querySelector(".pRepo");
-        currentRepo.addEventListener('click', repoHover);
+        currentP = currentRepo.parentNode.parentNode.parentNode.id;
+        currentRepo.addEventListener('click', getAndGoRepo);
     }, "275")
 }
 
@@ -172,6 +180,7 @@ navButtons.forEach(item => {
 
 let pItems = document.querySelectorAll(".portfolio-item");
 
-let repoHover = function() {
-    console.log("I'm working!");
+let getAndGoRepo = function() {
+    repoLink = eval(currentP + "Repo");
+    window.open(repoLink, '_blank');
 }
