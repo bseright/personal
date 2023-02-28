@@ -41,8 +41,8 @@ let pMouseover = function() {
 
         setTimeout(() => {
             thisDiv.style.opacity = "100";
-        }, "100")
-    }, "255")
+        }, "115")
+    }, "270")
 }
 
 let pMouseout = function() { 
