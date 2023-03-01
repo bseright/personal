@@ -1,3 +1,4 @@
+// store each portfolio item and corresponding icon
 let p1 = document.querySelector("#p1")
 let p1Icon = document.querySelector("#p1 .icon");
 
@@ -18,15 +19,18 @@ let demoLink;
 let masterTimer; // created to solve issue where user mouses over and out quickly -> allows timed out functions to stop if done too quickly
 
 let pMouseover = function() {
-    clearTimeout(masterTimer);
+    clearTimeout(masterTimer); // avoids content remaining or reappearing due to quick interaction
 
+    // discover current elements based on current portfolio item
     let thisIcon = eval(this.id + "Icon");
     let thisDiv = eval(this.id + "Div");
     let container = eval(this.id);
+    
+    // assign repo and demo links based on current portfolio item
     repoLink = eval(this.id + "Repo");
     demoLink = eval(this.id + "Demo");
 
-    thisIcon.style.opacity = "0";
+    thisIcon.style.opacity = "0"; //
 
     masterTimer = setTimeout(() => {
         thisIcon.style.display = "none";
@@ -36,8 +40,8 @@ let pMouseover = function() {
         setTimeout(() => {
             thisDiv.style.opacity = "100";
             clickable(); // fixes issue where user may click before button is active
-        }, "130")
-    }, "260")
+        }, "30")
+    }, "270")
 }
 
 let pMouseout = function() { 
@@ -54,6 +58,7 @@ let pMouseout = function() {
     }, "70")
 }
 
+// mouse over/leave event listeners for each portfolio item
 p1.addEventListener('mouseover', pMouseover);
 p1.addEventListener('mouseleave', pMouseout);
 
@@ -66,8 +71,7 @@ p3.addEventListener('mouseleave', pMouseout);
 p4.addEventListener('mouseover', pMouseover);
 p4.addEventListener('mouseleave', pMouseout);
 
-// creating portfolio1 hover content 
-
+// store text content and links
 let getTitleText = "Rock, Paper, Scissors"
 let p2TitleText = "Etch-a-Sketch";
 let p3TitleText = "Calculator";
@@ -88,8 +92,10 @@ let p2Demo = "https://bseright.github.io/etch-a-sketch/";
 let p3Demo = "https://bseright.github.io/calculator/";
 let p4Demo = "https://britainseright.com";
 
+// avoid rewriting html and css by assigning the same classes but different text content to each element
 function createContent(whichP) {
 
+    // creation of portfolio divs (pDiv > pContent + pButton)
     let pDiv = document.createElement("div");
     pDiv.classList.add("pDiv");
 
@@ -106,16 +112,16 @@ function createContent(whichP) {
     pTextContent.classList.add("pTextContent");
     pContentDiv.appendChild(pTextContent);
 
-    let pTitle = document.createElement("h3"); // Main title text
+    let pTitle = document.createElement("h3"); // main title text
     let pTitleText = document.createTextNode(getTitleText);
     pTitle.appendChild(pTitleText);
     pTextContent.appendChild(pTitle);
 
-    let pDivider = document.createElement("div"); // Creation of divider
+    let pDivider = document.createElement("div"); // creation of divider
     pDivider.classList.add("pDivider");
     pTextContent.appendChild(pDivider);
 
-    let pPara = document.createElement("p"); // Project description
+    let pPara = document.createElement("p"); // project description
     let pParaText = document.createTextNode(getParaText);
     pPara.appendChild(pParaText);
     pTextContent.appendChild(pPara);
@@ -132,6 +138,7 @@ function createContent(whichP) {
     pDemo.classList.add("pDemo");
     pButtonDiv.appendChild(pDemo);
 
+    // assign image, title, and paragraph content based on current portfolio item
     if(whichP === "p1") {
         pScreenshot.src = "images/rps-screenshot.PNG";
         getTitleText = p2TitleText;
@@ -156,13 +163,13 @@ function createContent(whichP) {
     pDiv.appendChild(pButtonDiv);
 }
 
+// create all portfolio content
 createContent("p1");
 createContent("p2");
 createContent("p3");
 createContent("p4");
 
-// start of navbar animations
-
+// animate nav bar on click and establish active class for scrolling animation
 let navButtons = document.querySelectorAll(".top-menu li");
 let sections = document.querySelectorAll(".section");
 let active = document.querySelector(".active");
@@ -177,6 +184,7 @@ navButtons.forEach(item => {
     })
 })
 
+// assign current repo based on current portfolio item hover
 let getRepoDemo = function() {
     currentRepo = document.querySelector(".pRepo");
     currentRepo.addEventListener('click', goRepo);
@@ -192,7 +200,9 @@ let goDemo = function() {
     window.open(demoLink, '_blank');
 }
 
+// buttons only appear clickable after event listener is established - no more null clicks!
 let clickable = function() {
     currentRepo.style.pointerEvents = "all";
     currentDemo.style.pointerEvents = "all";
 }
+
