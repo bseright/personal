@@ -1,12 +1,3 @@
-let currentRepo;
-let repoLink;
-let currentP;
-
-let p1Repo = "https://github.com/bseright/rock-paper-scissors";
-let p2Repo = "https://github.com/bseright/etch-a-sketch";
-let p3Repo = "https://github.com/bseright/calculator";
-let p4Repo = "https://github.com/bseright/personal";
-
 let p1 = document.querySelector("#p1")
 let p1Icon = document.querySelector("#p1 .icon");
 
@@ -19,37 +10,41 @@ let p3Icon = document.querySelector("#p3 .icon");
 let p4 = document.querySelector("#p4")
 let p4Icon = document.querySelector("#p4 .icon");
 
+let currentRepo; // hosted globally to reassign repo and demo links on hover
+let repoLink;
+let currentDemo;
+let demoLink;
+
 let masterTimer; // created to solve issue where user mouses over and out quickly -> allows timed out functions to stop if done too quickly
 
 let pMouseover = function() {
-    if (masterTimer) {
-        clearTimeout(masterTimer);
-    }
+    clearTimeout(masterTimer);
 
     let thisIcon = eval(this.id + "Icon");
     let thisDiv = eval(this.id + "Div");
     let container = eval(this.id);
+    repoLink = eval(this.id + "Repo");
+    demoLink = eval(this.id + "Demo");
 
     thisIcon.style.opacity = "0";
 
     masterTimer = setTimeout(() => {
         thisIcon.style.display = "none";
         container.appendChild(thisDiv);
-        currentRepo = document.querySelector(".pRepo");
-        currentP = currentRepo.parentNode.parentNode.parentNode.id;
-        currentRepo.addEventListener('click', getAndGoRepo);
+        getRepoDemo();
 
         setTimeout(() => {
             thisDiv.style.opacity = "100";
-        }, "115")
-    }, "270")
+            clickable(); // fixes issue where user may click before button is active
+        }, "130")
+    }, "260")
 }
 
 let pMouseout = function() { 
+    clearTimeout(masterTimer);
     let thisIcon = eval(this.id + "Icon");
     let thisDiv = eval(this.id + "Div");
 
-    clearTimeout(masterTimer);
     thisDiv.style.opacity = "0";
     thisDiv.remove();
     thisIcon.style.display = "block";
@@ -73,11 +68,6 @@ p4.addEventListener('mouseleave', pMouseout);
 
 // creating portfolio1 hover content 
 
-let p1Div;
-let p2Div;
-let p3Div;
-let p4Div;
-
 let getTitleText = "Rock, Paper, Scissors"
 let p2TitleText = "Etch-a-Sketch";
 let p3TitleText = "Calculator";
@@ -87,6 +77,16 @@ let getParaText = "An animated game of Rock, Paper, Scissors with randomized opp
 let p2ParaText = "An interactive Etch-a-Sketch with scrollable knobs that alter the cursor position and color. The user can randomize color or select a unique color with the provided RGB knobs.";
 let p3ParaText = "A simple calulator with the ability to retain previous outcomes to be further manipulated. For some added flair, there is a toggle to select dark or light themes.";
 let p4ParaText = "My portfolio! Although I am aware that there are many paths to jump start mobile-responsive design, I wanted my first attempt to come from vanilla libraries.";
+
+let p1Repo = "https://github.com/bseright/rock-paper-scissors";
+let p2Repo = "https://github.com/bseright/etch-a-sketch";
+let p3Repo = "https://github.com/bseright/calculator";
+let p4Repo = "https://github.com/bseright/personal";
+
+let p1Demo = "https://bseright.github.io/rock-paper-scissors/";
+let p2Demo = "https://bseright.github.io/etch-a-sketch/";
+let p3Demo = "https://bseright.github.io/calculator/";
+let p4Demo = "https://britainseright.com";
 
 function createContent(whichP) {
 
@@ -177,9 +177,22 @@ navButtons.forEach(item => {
     })
 })
 
-let pItems = document.querySelectorAll(".portfolio-item");
+let getRepoDemo = function() {
+    currentRepo = document.querySelector(".pRepo");
+    currentRepo.addEventListener('click', goRepo);
+    currentDemo = document.querySelector(".pDemo");
+    currentDemo.addEventListener('click', goDemo);
+}
 
-let getAndGoRepo = function() {
-    repoLink = eval(currentP + "Repo");
+let goRepo = function() {
     window.open(repoLink, '_blank');
+}
+
+let goDemo = function() {
+    window.open(demoLink, '_blank');
+}
+
+let clickable = function() {
+    currentRepo.style.pointerEvents = "all";
+    currentDemo.style.pointerEvents = "all";
 }
