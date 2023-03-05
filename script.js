@@ -25,6 +25,9 @@ let pMouseover = function() {
     let thisIcon = eval(this.id + "Icon");
     let thisDiv = eval(this.id + "Div");
     let container = eval(this.id);
+
+    let thisRepo = eval(this.id + "RepoButton");
+    thisRepo.addEventListener('click', goRepo);
     
     // assign repo and demo links based on current portfolio item
     repoLink = eval(this.id + "Repo");
@@ -35,11 +38,9 @@ let pMouseover = function() {
     masterTimer = setTimeout(() => {
         thisIcon.style.display = "none";
         container.appendChild(thisDiv);
-        getRepoDemo();
 
         setTimeout(() => {
             thisDiv.style.opacity = "100";
-            clickable(); // fixes issue where user may click before button is active
         }, "30")
     }, "270")
 }
@@ -144,19 +145,23 @@ function createContent(whichP) {
         getTitleText = p2TitleText;
         getParaText = p2ParaText;
         p1Div = pDiv;
+        p1RepoButton = pRepo;
     } else if (whichP === "p2") {
         pScreenshot.src = "images/etch-screenshot.PNG";
         getTitleText = p3TitleText;
         getParaText = p3ParaText;
         p2Div = pDiv;
+        p2RepoButton = pRepo;
     } else if (whichP === "p3") {
         pScreenshot.src = "images/calc-screenshot.PNG";
         getTitleText = p4TitleText;
         getParaText = p4ParaText;
         p3Div = pDiv;
+        p3RepoButton = pRepo;
     } else {
         pScreenshot.src = "images/mobile-screenshot.PNG";
         p4Div = pDiv;
+        p4RepoButton = pRepo;
     }
 
     pDiv.appendChild(pContentDiv);
@@ -185,8 +190,6 @@ navButtons.forEach(item => {
 
 // assign current repo based on current portfolio item hover
 let getRepoDemo = function() {
-    currentRepo = document.querySelector(".pRepo");
-    currentRepo.addEventListener('click', goRepo);
     currentDemo = document.querySelector(".pDemo");
     currentDemo.addEventListener('click', goDemo);
 }
@@ -197,12 +200,6 @@ let goRepo = function() {
 
 let goDemo = function() {
     window.open(demoLink, '_blank');
-}
-
-// buttons only appear clickable after event listener is established - no more null clicks!
-let clickable = function() {
-    currentRepo.style.pointerEvents = "all";
-    currentDemo.style.pointerEvents = "all";
 }
 
 /*
