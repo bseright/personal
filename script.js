@@ -42,7 +42,7 @@ let pMouseover = function() {
         setTimeout(() => {
             thisDiv.style.opacity = "100";
         }, "30")
-    }, "250")
+    }, "220")
 }
 
 let pMouseout = function() { 
