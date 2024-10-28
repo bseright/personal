@@ -1,15 +1,23 @@
 // store each portfolio item and corresponding icon
 let p1 = document.querySelector("#p1")
 let p1Icon = document.querySelector("#p1 .icon");
+p1.setAttribute("data-repo", "https://github.com/bseright/rock-paper-scissors");
+p1.setAttribute("data-demo", "https://bseright.github.io/rock-paper-scissors/");
 
 let p2 = document.querySelector("#p2")
 let p2Icon = document.querySelector("#p2 .icon");
+p2.setAttribute("data-repo", "https://github.com/bseright/etch-a-sketch");
+p2.setAttribute("data-demo", "https://bseright.github.io/etch-a-sketch/");
 
 let p3 = document.querySelector("#p3")
 let p3Icon = document.querySelector("#p3 .icon");
+p3.setAttribute("data-repo", "https://github.com/bseright/calculator");
+p3.setAttribute("data-demo", "https://bseright.github.io/calculator/");
 
 let p4 = document.querySelector("#p4")
 let p4Icon = document.querySelector("#p4 .icon");
+p4.setAttribute("data-repo", "https://github.com/bseright/personal");
+p4.setAttribute("data-demo", "https://britainseright.com");
 
 let currentRepo; // hosted globally to reassign repo and demo links on hover
 let repoLink;
@@ -30,8 +38,8 @@ let pMouseover = function() {
     thisRepo.addEventListener('click', goRepo);
     
     // assign repo and demo links based on current portfolio item
-    repoLink = eval(this.id + "Repo");
-    demoLink = eval(this.id + "Demo");
+    repoLink = this.getAttribute("data-repo");
+    demoLink = this.getAttribute("data-demo");
 
     thisIcon.style.opacity = "0"; //
 
@@ -42,7 +50,7 @@ let pMouseover = function() {
         setTimeout(() => {
             thisDiv.style.opacity = "100";
         }, "30")
-    }, "0")
+    }, "270")
 }
 
 let pMouseout = function() { 
@@ -189,19 +197,12 @@ navButtons.forEach(item => {
 })
 
 // assign current repo based on current portfolio item hover
-let getRepoDemo = function() {
-    currentRepo = document.querySelector(".pRepo");
-    currentRepo.addEventListener('click', goRepo);
-    currentDemo = document.querySelector(".pDemo");
-    currentDemo.addEventListener('click', goDemo);
+function goRepo() {
+   if (repoLink) window.open(repoLink, '_blank');
 }
 
-let goRepo = function() {
-    window.open(repoLink, '_blank');
-}
-
-let goDemo = function() {
-    window.open(demoLink, '_blank');
+function goDemo() {
+   if (demoLink) window.open(demoLink, '_blank');
 }
 
 /*
