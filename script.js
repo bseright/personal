@@ -190,6 +190,8 @@ navButtons.forEach(item => {
 
 // assign current repo based on current portfolio item hover
 let getRepoDemo = function() {
+    currentRepo = document.querySelector(".pRepo");
+    currentRepo.addEventListener('click', goRepo);
     currentDemo = document.querySelector(".pDemo");
     currentDemo.addEventListener('click', goDemo);
 }
